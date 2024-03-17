@@ -1,0 +1,55 @@
+API_Endpoint: http://localhost:8000
+GET:
+/api/characters
+POST:
+/api/characters
+
+GET: USER BY ID
+/api/characters/:id
+
+PUT: UPDATE USER BY ID
+/api/characters/:id
+
+DELETE: DELETE USER BY ID
+/api/characters/:id
+
+
+
+{
+   "cust_id":"405",
+   "name":"Olajide Wale"
+}
+
+git branch -u origin/master
+
+
+
+=== nodejs.yml file ====
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: |
+        touch .env
+        echo "${{ secrets.PROD_ENV_FILE }}" > .env
+    - run: pm2 restart nodejsAPI

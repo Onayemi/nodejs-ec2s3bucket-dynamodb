@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <%- include("partials/navbar.ejs") %>
+
+    <div class="container mt-5">
+        <h3>API Endpoint <%- msg %></h3>
+
+        {<br/>
+            <b>API_Endpoint: http://localhost:8000 </b><br/><br/>
+            <b>GET:</b>  /api/characters <br/><br/>
+            <b>POST:</b> /api/characters <br/><br/>
+
+            <b>GET: USER BY ID </b><br/>
+            /api/characters/:id <br/><br/>
+
+            <b>PUT: UPDATE USER BY ID</b> <br/>
+            /api/characters/:id <br/><br/>
+
+            <b>DELETE: DELETE USER BY ID</b> <br/>
+            /api/characters/:id <br/><br/>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<%- include("partials/header.ejs") %>
+  <body>
+    <div class="sticky-top">
+        <%- include("partials/navbar.ejs") %>
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary top-sticky">
+          <div class="container">
+            <a class="navbar-brand" href="#">Olayori Logo</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/test">API Endpoint</a>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav> -->
+    </div>
+
+    <div class="container mt-5">
+      <h1>Home Page</h1>
+      <div class="row g-2 mt-3">
+        <div class="col-sm-6 col-md-6 col-lg-4">
+            <h3>API EndPoint</h3>
+          <p class="p-3 fs-6 border bg-dark text-white">
+            {<br/>
+                GET: localhost:3000/api/users<br/>
+                GET: localhost:3000/api/users/3<br/>
+                POST: localhost:3000/details<br/>
+                PUT: localhost:3000/api/users/3<br/>
+                DELETE localhost:3000/api/users/3<br/>
+            }
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+            <h3>Web Development</h3>
+          <p class="p-3 fs-6 border bg-warning">
+            WebBuild fast, responsive sites with Bootstrap. Powerful, extensible, and feature-packed frontend toolkit. 
+            Build and customize with Sass, utilize prebuilt grid system and Powerful, extensible, and feature-packed frontend toolkit.<br/>
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+            <h3>S3 Bucket Image</h3>
+          <p class="p-3 fs-6 border bg-dark text-white">
+            The photo album is in an Amazon S3 bucket into which photos are uploaded. The browser script uses the SDK for JavaScript to interact with an Amazon S3 bucket. The script uses the list Objects method of the Amazon S3 client class to enable.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-2 mt-3">
+        <h2 class="text-center">Image Fetch From Amazon S3 Bucket</h2>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="card h-100 shadow">
+            <img src="https://yoris3bucket-1.s3.ca-central-1.amazonaws.com/img1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text fs-6">
+                Some quick example text to build on the card.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="card h-100 shadow">
+            <img src="https://yoris3bucket-1.s3.ca-central-1.amazonaws.com/img2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text fs-6">
+                Some quick example text to build on the card.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="card h-100 shadow">
+            <img src="https://yoris3bucket-1.s3.ca-central-1.amazonaws.com/img3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="card h-100 shadow">
+            <img src="https://yoris3bucket-1.s3.ca-central-1.amazonaws.com/img4.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text fs-6">
+                Some quick example text to build on the card.
+              </p>
+              <NuxtLink to="/" class="btn btn-primary text-wrap py-auto"
+                >Go somewhere</NuxtLink
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
