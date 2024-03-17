@@ -93,7 +93,7 @@ app.delete("/api/characters/:id", async (req, res) => {
     res.json(await deleteCharacter(id));
   } catch (err) {
     console.error(err);
-    res.status(500).json({ err: "Something went wrong" });
+    res.status(500).json({ err: "Something went wrong!" });
   }
 });
 
